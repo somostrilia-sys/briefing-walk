@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Briefing — Landing Page / Site Institucional | Walk Holding</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  body { font-family: 'Inter', sans-serif; }
+  .gradient-bg {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+  }
+  .glow {
+    box-shadow: 0 0 40px rgba(99, 102, 241, 0.15);
+  }
+  input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+  }
+  .section-card {
+    transition: all 0.3s ease;
+  }
+  .section-card:hover {
+    border-color: #6366f1;
+  }
+  .checkbox-card {
+    transition: all 0.2s ease;
+  }
+  .checkbox-card:has(input:checked) {
+    border-color: #6366f1;
+    background-color: #eef2ff;
+  }
+  .step-number {
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  }
+</style>
+</head>
+<body class="bg-slate-50 min-h-screen">
+
+<!-- Hero -->
+<div class="gradient-bg text-white py-16 px-6">
+  <div class="max-w-3xl mx-auto text-center">
+    <div class="inline-block px-4 py-1 bg-indigo-500/20 border border-indigo-400/30 rounded-full text-indigo-200 text-sm font-medium mb-6">
+      Walk Holding
+    </div>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 tracking-tight">Briefing de Projeto</h1>
+    <p class="text-xl text-slate-300 font-light">Landing Page / Site Institucional</p>
+    <p class="text-slate-400 mt-6 max-w-xl mx-auto">
+      Preencha as informações abaixo para que possamos entender o projeto e preparar a melhor proposta.
+      Leva cerca de <span class="text-indigo-300 font-medium">10–15 minutos</span>.
+    </p>
+  </div>
+</div>
+
+<!-- Form -->
+<form action="https://formsubmit.co/alexander@holdingwalk.com.br" method="POST" class="max-w-3xl mx-auto px-6 py-12 space-y-8">
+
+  <input type="hidden" name="_subject" value="Novo briefing preenchido - Landing Page">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_next" value="https://briefing-walk.vercel.app/obrigado.html">
+
+  <!-- 1. Identificação -->
+  <section class="section-card bg-white rounded-2xl border-2 border-slate-200 p-8 glow">
+    <div class="flex items-center gap-4 mb-6">
+      <div class="step-number w-10 h-10 rounded-xl flex items-center justify-center text-white font-bold">1</div>
+      <h2 class="text-2xl font-bold text-slate-900">Identificação</h2>
+    </div>
+    <div class="grid md:grid-cols-2 gap-5">
+      <div>
+        <label class="block text-sm font-medium text-slate-700 mb-2">Empresa / Marca *</label>
+        <input required type="text" name="empresa" class="w-full px-4 py-3 border-2 border-slate-200 rounded-lg">
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-slate-700 mb-2">Responsável pelo projeto *</label>
+        <input required type="text" name="responsavel" class="w-full px-4 py-3 border-2 border-slate-200 rounded-lg">
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-slate-700 mb-2">E-mail *</label>
+        <input required type="email" name="email" class="w-full px-4 py-3 border-2 border-slate-200 rounded-lg">
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-slate-700 mb-2">WhatsApp</label>
+        <input type="tel" name="whatsapp" class="w-full px-4 py-3 border-2 border-slate-200 rounded-lg">
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-slate-700 mb-2">Prazo desejado de entrega</label>
+        <input type="text" name="prazo_desejado" placeholder="Ex: 45 dias" class="w-full px-4 py-3 border-2 border-slate-200 rounded-lg">
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-slate-700 mb-2">Orçamento estimado</label>
+        <select name="orcamento" class="w-full px-4 py-3 border-2 border-slate-200 rounded-lg bg-white">
+          <option value="">Selecione</option>
+          <option>Até R$ 5.000</option>
+          <option>R$ 5.000 – R$ 15.000</option>
+          <option>R$ 15.000 – R$ 30.000</option>
+          <option>R$ 30.000 – R$ 60.000</option>
+          <option>Acima de R$ 60.000</option>
+          <option>A definir</option>
+        </select>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Sobre a empresa -->
+  <section class="section-card bg-white rounded-2xl border-2 border-slate-200 p-8">
+    <div class="flex items-center gap-4 mb-6">
+      <div class="step-number w-10 h-10 rounded-xl flex items-center justify-center text-white font-bold">2</div>
+      <h2 class="text-2xl font-bold text-slate-900">Sobre a empresa</h2>
+    </div>
+    <div class="space-y-5">
+      <div>
+        <label class="block text-sm font-medium text-slate-700 mb-2">O que a empresa faz? *</label>
+        <textarea required name="sobre_empresa" rows="3" placeholder="Em 1 parágrafo..." class="w-full px-4 py-3 border-2 border-slate-200 rounded-lg"></textarea>
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-slate-700 mb-2">Diferenciais (o que te torna único)</label>
+        <textarea name="diferenciais" rows="3" placeholder="Um por linha" class="w-full px-4 py-3 border-2 border-slate-200 rounded-lg"></textarea>
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-slate-700 mb-2">Concorrentes diretos (nomes + sites)</label>
+        <textarea name="concorrentes" rows="2" class="w-full px-4 py-3 border-2 border-slate-200 rounded-lg"></textarea>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Objetivo -->
+  <section class="section-card bg-white rounded-2xl border-2 border-slate-200 p-8">
+    <div class="flex items-center gap-4 mb-6">
+      <div class="step-number w-10 h-10 rounded-xl flex items-center justify-center text-white font-bold">3</div>
+      <h2 class="text-2xl font-bold text-slate-900">Objetivo do site</h2>
+    </div>
+    <div class="space-y-5">
+      <div>
+        <label class="block text-sm font-medium text-slate-700 mb-3">Qual o objetivo principal? *</label>
+        <div class="grid md:grid-cols-2 gap-3">
+          <label class="checkbox-card flex items-center gap-3 p-4 border-2 border-slate-200 rounded-lg cursor-pointer">
+            <input type="radio" name="objetivo" value="Gerar leads" required class="w-4 h-4 text-indigo-600">
+            <span>Gerar leads</span>
+          </label>
+          <label class="checkbox-card flex items-center gap-3 p-4 border-2 border-slate-200 rounded-lg cursor-pointer">
+            <input type="radio" name="objetivo" value="Vender direto" class="w-4 h-4 text-indigo-600">
+            <span>Vender produto/serviço</span>
+          </label>
+          <label class="checkbox-card flex items-center gap-3 p-4 border-2 border-slate-200 rounded-lg cursor-pointer">
+            <input type="radio" name="objetivo" value="Agendar" class="w-4 h-4 text-indigo-600">
+            <span>Agendar reuniões/demos</span>
+          </label>
+          <label class="checkbox-card flex items-center gap-3 p-4 border-2 border-slate-200 rounded-lg cursor-pointer">
+            <input type="radio" name="objetivo" value="Institucional" class="w-4 h-4 text-indigo-600">
+            <span>Apresentação institucional</span>
+          </label>
+          <label class="checkbox-card flex items-center gap-3 p-4 border-2 border-slate-200 rounded-lg cursor-pointer">
+            <input type="radio" name="objetivo" value="Campanha ADS" class="w-4 h-4 text-indigo-600">
+            <span>Suporte a campanha ADS</span>
+          </label>
+          <label class="checkbox-card flex items-center gap-3 p-4 border-2 border-slate-200 rounded-lg cursor-pointer">
+            <input type="radio" name="objetivo" value="Outro" class="w-4 h-4 text-indigo-600">
+            <span>Outro</span>
+          </label>
+        </div>
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-slate-700 mb-2">Indicador de sucesso (KPI)</label>
+        <input type="text" name="kpi" placeholder="Ex: 50 leads qualificados/mês" class="w-full px-4 py-3 border-2 border-slate-200 rounded-lg">
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Público-alvo -->
+  <section class="section-card bg-white rounded-2xl border-2 border-slate-200 p-8">
+    <div class="flex items-center gap-4 mb-6">
+      <div class="step-number w-10 h-10 rounded-xl flex items-center justify-center text-white font-bold">4</div>
+      <h2 class="text-2xl font-bold text-slate-900">Público-alvo</h2>
+    </div>
+    <div class="space-y-5">
+      <div>
+        <label class="block text-sm font-medium text-slate-700 mb-2">Quem é a persona principal? *</label>
+        <textarea required name="persona" rows="4" placeholder="Idade, cargo, principal dor, onde está..." class="w-full px-4 py-3 border-2 border-slate-200 rounded-lg"></textarea>
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-slate-700 mb-2">Jornada esperada no site</label>
+        <textarea name="jornada" rows="3" placeholder="Chega via X, entende Y, toma ação Z" class="w-full px-4 py-3 border-2 border-slate-200 rounded-lg"></textarea>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Escopo -->
+  <section class="section-card bg-white rounded-2xl border-2 border-slate-200 p-8">
+    <div class="flex items-center gap-4 mb-6">
+      <div class="step-number w-10 h-10 rounded-xl flex items-center justify-center text-white font-bold">5</div>
+      <h2 class="text-2xl font-bold text-slate-900">Escopo — páginas e seções</h2>
+    </div>
+    <div class="space-y-5">
+      <div>
+        <label class="block text-sm font-medium text-slate-700 mb-3">Páginas necessárias</label>
+        <div class="grid md:grid-cols-2 gap-3">
+          <label class="checkbox-card flex items-center gap-3 p-3 border-2 border-slate-200 rounded-lg cursor-pointer"><input type="checkbox" name="paginas" value="Home" class="w-4 h-4 text-indigo-600"><span>Home</span></label>
+          <label class="checkbox-card flex items-center gap-3 p-3 border-2 border-slate-200 rounded-lg cursor-pointer"><input type="checkbox" name="paginas" value="Sobre" class="w-4 h-4 text-indigo-600"><span>Sobre</span></label>
+          <label class="checkbox-card flex items-center gap-3 p-3 border-2 border-slate-200 rounded-lg cursor-pointer"><input type="checkbox" name="paginas" value="Serviços" class="w-4 h-4 text-indigo-600"><span>Serviços / Produtos</span></label>
+          <label class="checkbox-card flex items-center gap-3 p-3 border-2 border-slate-200 rounded-lg cursor-pointer"><input type="checkbox" name="paginas" value="Cases" class="w-4 h-4 text-indigo-600"><span>Cases / Portfólio</span></label>
+          <label class="checkbox-card flex items-center gap-3 p-3 border-2 border-slate-200 rounded-lg cursor-pointer"><input type="checkbox" name="paginas" value="Blog" class="w-4 h-4 text-indigo-600"><span>Blog</span></label>
+          <label class="checkbox-card flex items-center gap-3 p-3 border-2 border-slate-200 rounded-lg cursor-pointer"><input type="checkbox" name="paginas" value="Contato" class="w-4 h-4 text-indigo-600"><span>Contato</span></label>
+          <label class="checkbox-card flex items-center gap-3 p-3 border-2 border-slate-200 rounded-lg cursor-pointer"><input type="checkbox" name="paginas" value="Área logada" class="w-4 h-4 text-indigo-600"><span>Área logada</span></label>
+        </div>
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-slate-700 mb-2">Funcionalidades especiais</label>
+        <textarea name="funcionalidades" rows="3" placeholder="Ex: formulário, chat WhatsApp, calculadora, agendamento, multi-idioma..." class="w-full px-4 py-3 border-2 border-slate-200 rounded-lg"></textarea>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Identidade visual -->
+  <section class="section-card bg-white rounded-2xl border-2 border-slate-200 p-8">
+    <div class="flex items-center gap-4 mb-6">
+      <div class="step-number w-10 h-10 rounded-xl flex items-center justify-center text-white font-bold">6</div>
+      <h2 class="text-2xl font-bold text-slate-900">Identidade visual</h2>
+    </div>
+    <div class="space-y-5">
+      <div>
+        <label class="block text-sm font-medium text-slate-700 mb-3">Já tem identidade definida?</label>
+        <div class="grid md:grid-cols-3 gap-3">
+          <label class="checkbox-card flex items-center gap-3 p-4 border-2 border-slate-200 rounded-lg cursor-pointer"><input type="radio" name="identidade" value="Completa" class="w-4 h-4"><span>Completa</span></label>
+          <label class="checkbox-card flex items-center gap-3 p-4 border-2 border-slate-200 rounded-lg cursor-pointer"><input type="radio" name="identidade" value="Parcial" class="w-4 h-4"><span>Parcial</span></label>
+          <label class="checkbox-card flex items-center gap-3 p-4 border-2 border-slate-200 rounded-lg cursor-pointer"><input type="radio" name="identidade" value="Não tenho" class="w-4 h-4"><span>Não tenho</span></label>
+        </div>
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-slate-700 mb-3">Mood / sensação (até 3)</label>
+        <div class="grid md:grid-cols-3 gap-3">
+          <label class="checkbox-card flex items-center gap-3 p-3 border-2 border-slate-200 rounded-lg cursor-pointer"><input type="checkbox" name="mood" value="Corporativo" class="w-4 h-4"><span>Corporativo</span></label>
+          <label class="checkbox-card flex items-center gap-3 p-3 border-2 border-slate-200 rounded-lg cursor-pointer"><input type="checkbox" name="mood" value="Tecnológico" class="w-4 h-4"><span>Tecnológico</span></label>
+          <label class="checkbox-card flex items-center gap-3 p-3 border-2 border-slate-200 rounded-lg cursor-pointer"><input type="checkbox" name="mood" value="Humano" class="w-4 h-4"><span>Humano</span></label>
+          <label class="checkbox-card flex items-center gap-3 p-3 border-2 border-slate-200 rounded-lg cursor-pointer"><input type="checkbox" name="mood" value="Luxo" class="w-4 h-4"><span>Luxo / Premium</span></label>
+          <label class="checkbox-card flex items-center gap-3 p-3 border-2 border-slate-200 rounded-lg cursor-pointer"><input type="checkbox" name="mood" value="Minimalista" class="w-4 h-4"><span>Minimalista</span></label>
+          <label class="checkbox-card flex items-center gap-3 p-3 border-2 border-slate-200 rounded-lg cursor-pointer"><input type="checkbox" name="mood" value="Vibrante" class="w-4 h-4"><span>Vibrante</span></label>
+        </div>
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-slate-700 mb-2">Paleta desejada</label>
+        <input type="text" name="paleta" placeholder="Ex: azul marinho + dourado" class="w-full px-4 py-3 border-2 border-slate-200 rounded-lg">
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Referências -->
+  <section class="section-card bg-white rounded-2xl border-2 border-slate-200 p-8">
+    <div class="flex items-center gap-4 mb-6">
+      <div class="step-number w-10 h-10 rounded-xl flex items-center justify-center text-white font-bold">7</div>
+      <h2 class="text-2xl font-bold text-slate-900">Referências visuais</h2>
+    </div>
+    <div class="space-y-5">
+      <div>
+        <label class="block text-sm font-medium text-slate-700 mb-2">Sites que admira (2–4 links + o que gostou)</label>
+        <textarea name="referencias_positivas" rows="4" placeholder="https://... — gostei de..." class="w-full px-4 py-3 border-2 border-slate-200 rounded-lg"></textarea>
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-slate-700 mb-2">Sites que NÃO gosta e por quê</label>
+        <textarea name="referencias_negativas" rows="3" class="w-full px-4 py-3 border-2 border-slate-200 rounded-lg"></textarea>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Conteúdo -->
+  <section class="section-card bg-white rounded-2xl border-2 border-slate-200 p-8">
+    <div class="flex items-center gap-4 mb-6">
+      <div class="step-number w-10 h-10 rounded-xl flex items-center justify-center text-white font-bold">8</div>
+      <h2 class="text-2xl font-bold text-slate-900">Conteúdo</h2>
+    </div>
+    <div class="space-y-5">
+      <div>
+        <label class="block text-sm font-medium text-slate-700 mb-3">Quem produz o conteúdo?</label>
+        <div class="grid md:grid-cols-2 gap-3">
+          <label class="checkbox-card flex items-center gap-3 p-3 border-2 border-slate-200 rounded-lg cursor-pointer"><input type="checkbox" name="conteudo" value="Cliente textos" class="w-4 h-4"><span>Cliente entrega textos</span></label>
+          <label class="checkbox-card flex items-center gap-3 p-3 border-2 border-slate-200 rounded-lg cursor-pointer"><input type="checkbox" name="conteudo" value="Agência copy" class="w-4 h-4"><span>Agência produz copy</span></label>
+          <label class="checkbox-card flex items-center gap-3 p-3 border-2 border-slate-200 rounded-lg cursor-pointer"><input type="checkbox" name="conteudo" value="Cliente fotos" class="w-4 h-4"><span>Cliente entrega fotos</span></label>
+          <label class="checkbox-card flex items-center gap-3 p-3 border-2 border-slate-200 rounded-lg cursor-pointer"><input type="checkbox" name="conteudo" value="Agência imagens" class="w-4 h-4"><span>Agência produz imagens</span></label>
+        </div>
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-slate-700 mb-2">Observações sobre conteúdo</label>
+        <textarea name="conteudo_obs" rows="2" class="w-full px-4 py-3 border-2 border-slate-200 rounded-lg"></textarea>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. Técnico -->
+  <section class="section-card bg-white rounded-2xl border-2 border-slate-200 p-8">
+    <div class="flex items-center gap-4 mb-6">
+      <div class="step-number w-10 h-10 rounded-xl flex items-center justify-center text-white font-bold">9</div>
+      <h2 class="text-2xl font-bold text-slate-900">Técnico e integrações</h2>
+    </div>
+    <div class="space-y-5">
+      <div>
+        <label class="block text-sm font-medium text-slate-700 mb-2">Preferência de tecnologia</label>
+        <select name="tech" class="w-full px-4 py-3 border-2 border-slate-200 rounded-lg bg-white">
+          <option value="">Sem preferência</option>
+          <option>WordPress / Elementor</option>
+          <option>Next.js / React (Vercel)</option>
+          <option>Webflow / Framer</option>
+          <option>HTML/CSS estático</option>
+          <option>Outro</option>
+        </select>
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-slate-700 mb-2">Domínio</label>
+        <input type="text" name="dominio" placeholder="Já tenho / preciso registrar" class="w-full px-4 py-3 border-2 border-slate-200 rounded-lg">
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-slate-700 mb-3">Integrações necessárias</label>
+        <div class="grid md:grid-cols-2 gap-3">
+          <label class="checkbox-card flex items-center gap-3 p-3 border-2 border-slate-200 rounded-lg cursor-pointer"><input type="checkbox" name="integracoes" value="GA4" class="w-4 h-4"><span>Google Analytics</span></label>
+          <label class="checkbox-card flex items-center gap-3 p-3 border-2 border-slate-200 rounded-lg cursor-pointer"><input type="checkbox" name="integracoes" value="Meta Pixel" class="w-4 h-4"><span>Meta Pixel</span></label>
+          <label class="checkbox-card flex items-center gap-3 p-3 border-2 border-slate-200 rounded-lg cursor-pointer"><input type="checkbox" name="integracoes" value="GTM" class="w-4 h-4"><span>Google Tag Manager</span></label>
+          <label class="checkbox-card flex items-center gap-3 p-3 border-2 border-slate-200 rounded-lg cursor-pointer"><input type="checkbox" name="integracoes" value="CRM" class="w-4 h-4"><span>CRM</span></label>
+          <label class="checkbox-card flex items-center gap-3 p-3 border-2 border-slate-200 rounded-lg cursor-pointer"><input type="checkbox" name="integracoes" value="WhatsApp" class="w-4 h-4"><span>WhatsApp Business</span></label>
+          <label class="checkbox-card flex items-center gap-3 p-3 border-2 border-slate-200 rounded-lg cursor-pointer"><input type="checkbox" name="integracoes" value="Email marketing" class="w-4 h-4"><span>E-mail marketing</span></label>
+          <label class="checkbox-card flex items-center gap-3 p-3 border-2 border-slate-200 rounded-lg cursor-pointer"><input type="checkbox" name="integracoes" value="Pagamentos" class="w-4 h-4"><span>Pagamentos</span></label>
+          <label class="checkbox-card flex items-center gap-3 p-3 border-2 border-slate-200 rounded-lg cursor-pointer"><input type="checkbox" name="integracoes" value="LGPD" class="w-4 h-4"><span>LGPD / cookies</span></label>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. Extras -->
+  <section class="section-card bg-white rounded-2xl border-2 border-slate-200 p-8">
+    <div class="flex items-center gap-4 mb-6">
+      <div class="step-number w-10 h-10 rounded-xl flex items-center justify-center text-white font-bold">10</div>
+      <h2 class="text-2xl font-bold text-slate-900">Informações extras</h2>
+    </div>
+    <div class="space-y-5">
+      <div>
+        <label class="block text-sm font-medium text-slate-700 mb-2">Algo importante que não foi perguntado?</label>
+        <textarea name="extras" rows="4" class="w-full px-4 py-3 border-2 border-slate-200 rounded-lg"></textarea>
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-slate-700 mb-2">Links úteis (drive com materiais, manual de marca, acessos)</label>
+        <textarea name="links" rows="3" class="w-full px-4 py-3 border-2 border-slate-200 rounded-lg"></textarea>
+      </div>
+    </div>
+  </section>
+
+  <!-- Submit -->
+  <div class="text-center pt-4">
+    <button type="submit" class="inline-flex items-center gap-3 px-10 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all">
+      Enviar briefing
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg>
+    </button>
+    <p class="text-sm text-slate-500 mt-4">Suas respostas serão enviadas com segurança.</p>
+  </div>
+
+</form>
+
+<footer class="py-8 text-center text-slate-500 text-sm">
+  Walk Holding &copy; 2026
+</footer>
+
+</body>
+</html>
